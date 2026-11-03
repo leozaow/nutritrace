@@ -3,6 +3,7 @@ import { DB } from '../lib/db.js';
 import { noteCoachingSignature } from './coaching.js';
 import { FIRST_DAY_DEFAULT, resolveFirstDay } from '../lib/week.js';
 import { FACTS_COLUMN_DEFAULT } from '../lib/facts-column.js';
+import { browserDefaultLocale } from '../i18n/index.js';
 
 // Verbose settings sync logs gated on dev OR opt-in verbose mode
 // (Settings → Diagnostics → Verbose diagnostic logging).
@@ -521,7 +522,7 @@ function createSettingStore(key, defaultValue) {
 }
 
 export const appearance       = createSettingStore('appearance',       'system');
-export const language          = createSettingStore('language',          'en');
+export const language          = createSettingStore('language',          browserDefaultLocale());
 export const energyUnit        = createSettingStore('energyUnit',       'kcal');
 export const mealNames         = createSettingStore('mealNames',        ['Breakfast','Lunch','Dinner','Snacks']);
 export const goals             = createSettingStore('goals',            {});
