@@ -8,6 +8,7 @@ register('fr', () => import('./fr.json'));
 register('de', () => import('./de.json'));
 register('es', () => import('./es.json'));
 register('ru', () => import('./ru.json'));
+register('pt-BR', () => import('./pt_BR.json'));
 
 export const AVAILABLE_LOCALES = [
   { code: 'en', label: 'English' },
@@ -15,6 +16,7 @@ export const AVAILABLE_LOCALES = [
   { code: 'de', label: 'Deutsch' },
   { code: 'es', label: 'Español' },
   { code: 'ru', label: 'Русский' },
+  { code: 'pt-BR', label: 'Português (Brasil)' },
 ];
 
 export function initI18n(initialLocale) {
