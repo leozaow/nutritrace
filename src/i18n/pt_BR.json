@@ -4,7 +4,8 @@
     "foods": "Alimentos",
     "statistics": "Estatísticas",
     "goals": "Metas",
-    "settings": "Configurações"
+    "settings": "Configurações",
+    "wellness": "Bem-estar"
   },
   "common": {
     "saving": "Salvando…",
@@ -14,10 +15,30 @@
     "close": "Fechar",
     "errors": {
       "network_error_upload": "Erro de rede no upload",
-      "name_required": "Nome necessário"
+      "name_required": "Nome necessário",
+      "cant_reach_server": "Não foi possível conectar ao servidor",
+      "failed": "Falha",
+      "unlink_failed": "Não foi possível desvincular",
+      "save_failed": "Não foi possível salvar",
+      "delete_failed": "Não foi possível excluir",
+      "voice_unsupported": "Este navegador não oferece suporte à entrada por voz",
+      "cant_start_mic": "Não foi possível ativar o microfone"
     },
     "save": "Salvo",
-    "delete": "Apagar"
+    "delete": "Apagar",
+    "sign_out": "Sair",
+    "log_out": "Sair",
+    "hide": "Ocultar",
+    "signed_in": "Conectado",
+    "signed_out": "Desconectado",
+    "linked": "Vinculado",
+    "unlinked": "Desvinculado",
+    "admin": "administrador",
+    "macro_pct": {
+      "protein": "Proteínas {pct}%",
+      "carbs": "Carboidratos {pct}%",
+      "fat": "Gorduras {pct}%"
+    }
   },
   "routes": {
     "statistics": {
@@ -34,6 +55,9 @@
     },
     "settings": {
       "title": "Configuração"
+    },
+    "wellness": {
+      "title": "Bem-estar"
     }
   },
   "sync": {
@@ -48,17 +72,44 @@
       "server_fallback": "servidor",
       "no_network_title": "Sem conexão",
       "reconnect": "Reconectando.",
-      "saved_locally": "Sua alterações foram salvas localmente e serão sincronizadas automaticamente."
+      "saved_locally": "Sua alterações foram salvas localmente e serão sincronizadas automaticamente.",
+      "cant_reach_title": "Não foi possível acessar {host}",
+      "server_error": "O servidor retornou HTTP {status}. Tente novamente em instantes.",
+      "mobile_data": "Você está usando dados móveis. Talvez seja necessário conectar-se ao Wi-Fi de casa ou à VPN para acessar este servidor."
     },
     "syncing": "Sincronizando…",
     "time": {
-      "seconds_ago": "{count}s atrás"
-    }
+      "seconds_ago": "{count}s atrás",
+      "never": "nunca",
+      "just_now": "agora mesmo",
+      "minutes_ago": "há {count} min",
+      "hours_ago": "há {count} h",
+      "days_ago": "há {count} d"
+    },
+    "synced": "Sincronizado",
+    "refused": "O servidor recusou os dados pendentes: {reason}. Eles continuam salvos aqui e uma nova tentativa será feita.",
+    "sign_out_waiting_title": "Ainda há alterações pendentes",
+    "sign_out_anyway": "Sair mesmo assim",
+    "switch_account_waiting_title": "Há alterações pendentes de outra conta",
+    "switch_account_anyway": "Entrar mesmo assim",
+    "same_server_title": "Este é o mesmo servidor?",
+    "same_server": "O endereço deste servidor é diferente do utilizado anteriormente neste dispositivo, e não foi possível identificar se é o mesmo. Se for, seus dados locais serão mantidos e sincronizados. Caso contrário, eles serão tratados como pertencentes a outra conta.",
+    "same_server_yes": "Mesmo servidor",
+    "same_server_no": "Outro servidor",
+    "account_check_failed_title": "Não foi possível abrir seus dados",
+    "account_check_failed": "Este dispositivo não conseguiu identificar a qual conta pertencem os dados locais, por isso nada será exibido por enquanto. Tente novamente ou saia da conta.",
+    "sync_failing": "Não foi possível acessar o servidor",
+    "not_synced": "Ainda não sincronizado",
+    "sync_now": "Sincronizar agora",
+    "dismiss_message": "Dispensar mensagem de sincronização",
+    "last_synced": "Última sincronização"
   },
   "settings": {
     "appearance": {
       "theme": "Tema",
-      "navigation_style": "Tipo de Navegação"
+      "navigation_style": "Tipo de Navegação",
+      "section": "Aparência",
+      "accent_color": "Cor de destaque"
     },
     "regional": {
       "section": "Região e Unidades",
@@ -70,7 +121,21 @@
       "circumference": "Circunferência",
       "distance": "Distância",
       "time_12h": "12-horas (AM/PM)",
-      "time_24h": "24-horas"
+      "time_24h": "24-horas",
+      "time_format": "Formato da hora",
+      "energy": "Energia",
+      "formats_heading": "Idioma e formatos",
+      "formats_sub": "Idioma da interface e formatos de data e hora.",
+      "units_heading": "Unidades",
+      "units_sub": "As unidades escolhidas serão utilizadas em todas as telas que exibirem esses valores.",
+      "energy_kcal": "Calorias (kcal)",
+      "energy_kj": "Quilojoules (kJ)",
+      "first_day": "Primeiro dia da semana",
+      "first_day_desc": "A opção automática segue a região do dispositivo, que inicia a semana em {day}.",
+      "first_day_auto": "Automático",
+      "first_day_monday": "Segunda-feira",
+      "first_day_sunday": "Domingo",
+      "first_day_saturday": "Sábado"
     },
     "water": {
       "section": "Água"
@@ -86,7 +151,8 @@
     },
     "statistics": {
       "section": "Estatísticas",
-      "categories": "Categorias"
+      "categories": "Categorias",
+      "categories_help": "Arraste para reordenar os indicadores na página Estatísticas. Desative as categorias que você não utiliza."
     },
     "notifications": {
       "section": "Notificações"
@@ -96,8 +162,28 @@
         "auto_refresh_monthly": "Mensal",
         "auto_refresh_weekly": "Semanal",
         "auto_refresh_daily": "Diária",
-        "upload_country_auto": "Automático"
-      }
+        "upload_country_auto": "Automático",
+        "header": "Open Food Facts",
+        "enable": "Ativar Open Food Facts",
+        "enable_desc": "Pesquise alimentos no banco de dados colaborativo mundial ao adicionar produtos. Não é necessário ter conta para pesquisar; ela é exigida apenas para enviar alterações.",
+        "search_language": "Idioma da pesquisa",
+        "search_country": "País da pesquisa",
+        "upload_country": "País de publicação",
+        "import_portion": "Importar porção como",
+        "import_portion_100g": "Por 100 g",
+        "import_portion_serving": "Por porção",
+        "import_portion_desc": "Quando o produto escaneado tiver informações por porção, os valores serão preenchidos por porção em vez de por 100 g. Caso contrário, serão utilizados os valores por 100 g.",
+        "account_username": "Nome de usuário da conta",
+        "account_password": "Senha da conta",
+        "account_note": "Necessário para compartilhar produtos com o Open Food Facts. A conta é gratuita.",
+        "account_create_link": "Criar conta no Open Food Facts →",
+        "username_placeholder": "Usuário do Open Food Facts",
+        "password_placeholder": "Senha do Open Food Facts",
+        "auto_refresh": "Atualização automática",
+        "auto_refresh_desc": "Frequência de atualização da base local do Open Food Facts. Cada atualização baixa o arquivo completo (cerca de 4 GB).",
+        "auto_refresh_off": "Desativada"
+      },
+      "section": "Fontes de alimentos"
     },
     "ai": {
       "section": "Assistente de IA"
@@ -153,13 +239,141 @@
       "err_failed_create_invite": "Falha ao criar convite",
       "link_only": "Somente link (sem e-mail)",
       "role_admin_display": "Administrador",
-      "role_user_display": "Usuário"
+      "role_user_display": "Usuário",
+      "add_user": "+ Adicionar usuário",
+      "role": "Papel",
+      "role_admin": "administrador",
+      "create": "Criar",
+      "delete_user_message": "Todos os dados deste usuário — alimentos, refeições, registros diários e configurações — serão removidos. Esta ação não pode ser desfeita.",
+      "promote_message": "O usuário poderá gerenciar contas, compartilhamento, configurações de e-mail e provedores OIDC.",
+      "promote_confirm": "Promover",
+      "demote_title": "Remover privilégios de {name}?",
+      "demote_message": "O usuário perderá o acesso administrativo. Você poderá concedê-lo novamente depois.",
+      "demote_confirm": "Remover privilégios",
+      "invite_user_explainer": "Envie um link de cadastro para que o usuário escolha sua própria senha. Informe um e-mail para enviar o convite (exige SMTP) ou deixe o campo vazio para gerar um link copiável.",
+      "add_user_hide": "Ocultar cadastro manual",
+      "add_user_explainer": "Você define o nome de usuário e a senha e os compartilha diretamente com a pessoa. Útil quando não há SMTP configurado ou em ambientes sem conexão externa.",
+      "session_duration": "Duração da sessão",
+      "disable_um": "Desativar gerenciamento de usuários",
+      "disable_um_subtitle": "Remove todas as contas e volta ao modo de usuário único",
+      "disable_um_title": "Desativar gerenciamento de usuários?",
+      "disable_um_message": "Todas as contas e seus dados serão removidos permanentemente. O aplicativo voltará ao modo de usuário único.",
+      "disable_um_confirm": "Desativar e excluir tudo",
+      "enable_um": "Ativar gerenciamento de usuários",
+      "enable_um_subtitle": "Permite contas separadas, cada uma com seus próprios dados e configurações",
+      "enable_create": "Ativar e criar administrador",
+      "enabling": "Ativando…",
+      "toast_role_changed": "{name} agora tem o papel {role}",
+      "toast_um_enabled": "Gerenciamento de usuários ativado",
+      "toast_um_disabled": "Gerenciamento de usuários desativado",
+      "err_username_required": "Informe o nome de usuário",
+      "err_passwords_mismatch": "As senhas não coincidem",
+      "err_username_password_required": "Informe o nome de usuário e a senha",
+      "err_registration_failed": "Falha ao cadastrar",
+      "err_could_not_change_role": "Não foi possível alterar o papel do usuário",
+      "err_could_not_reset_password": "Não foi possível redefinir a senha",
+      "err_could_not_reach_server": "Não foi possível acessar o servidor",
+      "revoke_invite_title": "Revogar convite?",
+      "revoke_invite_message": "O link deixará de funcionar imediatamente e não poderá mais ser utilizado pelo destinatário.",
+      "revoke_confirm": "Revogar",
+      "invite_revoked": "Convite revogado",
+      "err_could_not_revoke": "Não foi possível revogar o convite",
+      "invite_email_hint": "Informe um e-mail válido ou deixe o campo vazio para gerar um link de convite.",
+      "err_invite_email": "Informe um e-mail válido ou deixe o campo vazio para gerar um link de convite",
+      "err_could_not_create_invite": "Não foi possível criar o convite",
+      "pending_invites": "Convites pendentes",
+      "role_coach": "orientador",
+      "role_coach_display": "Orientador",
+      "coach_title": "Tornar {name} orientador?",
+      "coach_message": "O usuário poderá convidar pessoas para acompanhamento. Cada pessoa precisa aceitar antes de compartilhar diário, metas, peso e alimentos. Nas demais áreas, um orientador tem as mesmas permissões de usuário comum.",
+      "coach_confirm": "Tornar orientador",
+      "uncoach_title": "Remover o papel de orientador de {name}?",
+      "uncoach_message": "Seus acompanhamentos e pedidos pendentes serão encerrados. Seus dados pessoais serão mantidos.",
+      "uncoach_confirm": "Remover papel de orientador",
+      "toast_coaching_ended": "{name} agora tem o papel {role}. Seus acompanhamentos foram encerrados.",
+      "invite_coach": "Orientador",
+      "invite_coach_none": "Sem orientador",
+      "invite_coach_hint": "A nova conta receberá um pedido deste orientador para aceitar ou recusar.",
+      "invite_coach_meta": "Orientador: {name}",
+      "coaching_heading": "Acompanhamento",
+      "coaching_desc": "Relação entre orientadores e pessoas acompanhadas. Um administrador pode encerrar qualquer vínculo, mas só pode ver os dados de quem acompanha diretamente.",
+      "coaching_none": "Não há acompanhamentos ativos ou pendentes.",
+      "coaching_pair": "{coach} acompanha {client}",
+      "coaching_pending": "Pedido pendente",
+      "coaching_active_since": "Desde {date}",
+      "coaching_end": "Encerrar",
+      "coaching_end_aria": "Encerrar acompanhamento entre {coach} e {client}",
+      "coaching_end_title": "Encerrar este acompanhamento?",
+      "coaching_end_message": "{coach} perderá acesso ao diário, às metas, ao peso, aos alimentos, às refeições e às receitas de {client}.",
+      "coaching_ended": "Acompanhamento encerrado",
+      "coach_someone": "Acompanhar alguém",
+      "coach_someone_desc": "Envie um pedido para acompanhar alguém. A aba Pessoas acompanhadas aparecerá em Metas quando houver um vínculo ativo.",
+      "expires_short": "expira em {date}",
+      "revoke_invite_aria": "Revogar convite",
+      "strong_passwords": "Exigir senhas fortes",
+      "strong_passwords_desc": "Recusa senhas fracas (pontuação zxcvbn inferior a 3), além das regras de no mínimo 8 caracteres, letras maiúsculas e minúsculas, número e símbolo. Válido para novas contas, convites e alterações de senha. As senhas existentes não são reavaliadas.",
+      "saved_short": "Salvo.",
+      "session_desc": "Por quanto tempo o usuário permanece conectado. Aplica-se aos próximos logins.",
+      "err_password_policy_prefix": "Não foi possível salvar a política de senhas: {msg}. Talvez seja necessário republicar o servidor.",
+      "err_password_policy": "Não foi possível salvar a política de senhas: {msg}",
+      "save_failed_status": "Falha ao salvar ({status})",
+      "network_error": "erro de rede",
+      "hide": "Ocultar",
+      "show": "Mostrar"
     },
     "diary": {
-      "section": "Diário"
+      "section": "Diário",
+      "show_quick_calories": "Mostrar botão de calorias rápidas",
+      "show_quick_calories_desc": "Adiciona um ícone de raio a cada refeição para registrar rapidamente apenas calorias, sem cadastrar alimento ou porção. Útil quando você conhece o valor energético, mas não quer cadastrar o alimento.",
+      "quick_calories_display": "Exibição das calorias rápidas",
+      "quick_calories_display_desc": "Define como aparecem vários registros de calorias rápidas na mesma refeição. Somadas reúne os registros em uma linha; Separadas mostra cada registro individualmente.",
+      "quick_calories_summed": "Somadas",
+      "quick_calories_separate": "Separadas"
     },
     "authentication": {
       "section": "Autenticação"
+    },
+    "foods": {
+      "section": "Alimentos"
+    },
+    "body_stats": {
+      "section": "Medidas corporais"
+    },
+    "wellness": {
+      "section": "Bem-estar"
+    },
+    "sharing": {
+      "section": "Compartilhamento de alimentos"
+    },
+    "email": {
+      "section": "E-mail (SMTP)"
+    },
+    "backup": {
+      "section": "Backup e restauração"
+    },
+    "importExport": {
+      "section": "Importação e exportação"
+    },
+    "server": {
+      "section": "Conexão com o servidor"
+    },
+    "diagnostics": {
+      "section": "Diagnósticos"
+    },
+    "updates": {
+      "section": "Atualizações"
+    },
+    "api_tokens": {
+      "section": "Tokens de API"
+    },
+    "webhooks": {
+      "section": "Webhooks"
+    },
+    "support": {
+      "section": "Suporte"
+    },
+    "about": {
+      "section": "Sobre"
     }
   },
   "updates": {
@@ -168,7 +382,9 @@
       "hourly": "A cada hora",
       "every_4h": "A cada 4 horas",
       "daily": "Dariamente",
-      "manual": "Manualmente"
+      "manual": "Manualmente",
+      "label": "Frequência de verificação",
+      "desc": "Frequência de busca por novas versões enquanto o aplicativo estiver aberto. A opção manual desativa as verificações automáticas."
     },
     "last_checked": "Ultima checagem",
     "check_now": "Checar agora",
@@ -191,7 +407,10 @@
     "banner_reload": "Recarregar",
     "storage": {
       "clearing": "Limpando…",
-      "cleared": "Cache limpo."
+      "cleared": "Cache limpo.",
+      "heading": "APKs de atualização em cache",
+      "empty": "Nenhum APK armazenado. A limpeza foi concluída.",
+      "clear_now": "Limpar agora"
     },
     "server": {
       "heading": "Servidor",
@@ -202,8 +421,30 @@
       "available_chip": "Atualização Disponível",
       "copy_command": "Copiar comando",
       "copied": "Copiado para área de trabalho.",
-      "copy_failed": "Falha ao copiar, Copie o camando manualmente."
-    }
+      "copy_failed": "Falha ao copiar, Copie o camando manualmente.",
+      "instructions": "Para atualizar o servidor, execute no computador host:",
+      "view_notes": "Ver notas de versão",
+      "channel_note": "Para mudar o canal do servidor, altere a tag da imagem no docker-compose.yml (:latest ou :dev) e execute docker compose pull e docker compose up -d."
+    },
+    "current_version": "Versão atual",
+    "channel": {
+      "label": "Canal de atualização",
+      "stable": "Estável",
+      "dev": "Desenvolvimento",
+      "help": "O canal estável acompanha versões lançadas. O de desenvolvimento recebe alterações contínuas e pode apresentar falhas."
+    },
+    "auto_check": "Verificar atualizações automaticamente",
+    "auto_check_desc": "Procurar novas versões em segundo plano.",
+    "off_resting": "Desativado. O servidor não consultará o GitHub. Ative para receber notícias de funcionalidades, correções e atualizações de segurança.",
+    "off_notice_title": "Verificação de atualizações desativada",
+    "off_notice": "O aplicativo não avisará sobre novos recursos, correções ou atualizações de segurança. Ao ativar, o servidor consultará o GitHub periodicamente, sem enviar seus dados.",
+    "turn_on": "Ativar",
+    "not_now": "Agora não",
+    "last_checked_never": "Nunca",
+    "check_failed": "Falha ao verificar atualizações. Tente novamente em instantes.",
+    "released": "Publicado em {when}",
+    "no_release_notes": "Não há notas de versão disponíveis para esta compilação.",
+    "no_apk_asset": "Esta versão não possui arquivo APK anexado."
   },
   "login": {
     "username": "Nome de Usuário",
@@ -215,6 +456,29 @@
     "recovery": {
       "disabling": "Desabilitando…",
       "failed": "Falha na recuperação"
+    },
+    "subtitle": "Entre na sua conta",
+    "sign_in": "Entrar",
+    "signing_in": "Entrando…",
+    "locked_out": "Não consegue acessar a conta?",
+    "session_ended": "Sua sessão neste dispositivo foi encerrada porque a senha ou a autenticação em duas etapas da conta mudou, ou porque você usou Sair de todos os dispositivos. Entre novamente para continuar. As alterações pendentes serão sincronizadas depois.",
+    "sso_sign_in_with": "Entrar com {provider}",
+    "no_signin_methods": "Não há formas de login disponíveis. Contate o administrador.",
+    "biometric": {
+      "sign_in_button": "Entrar com biometria",
+      "prompt": "Entre no NutriTrace",
+      "no_saved": "Não há credencial salva. Entre com sua senha primeiro.",
+      "expired": "O login salvo expirou. Entre com sua senha.",
+      "failed": "Falha na autenticação biométrica. Use sua senha."
+    },
+    "errors": {
+      "failed": "Falha no login"
+    },
+    "cookie_warning": {
+      "http_title": "Não é possível entrar por este endereço",
+      "http_body": "Esta página utiliza HTTP sem criptografia, mas o servidor só envia o cookie de autenticação por HTTPS. Por isso, o navegador descarta o cookie e retorna à tela de login. Acesse o NutriTrace por HTTPS ou, apenas em uma rede local confiável, configure INSECURE_COOKIES=1 no servidor e reinicie-o.",
+      "dropped_title": "O navegador não manteve sua sessão",
+      "dropped_body": "Sua senha estava correta, mas o navegador não manteve o cookie de autenticação. Verifique se os cookies estão permitidos e, se o NutriTrace estiver atrás de um proxy reverso, se o proxy está repassando os cookies."
     }
   },
   "forgot_password": {
@@ -365,5 +629,250 @@
       "mark_day_complete": "Marque o Dia como Completo",
       "unmark_day_complete": "Desmarque o Dia como Completo"
     }
+  },
+  "attach_image": {
+    "button": "Anexar imagem",
+    "camera": "Câmera",
+    "gallery": "Galeria"
+  },
+  "foods": {
+    "shortcut": {
+      "change": "Alterar",
+      "change_aria": "Alterar a refeição ou o dia"
+    },
+    "prev_day": {
+      "section_yesterday": "Refeições de ontem",
+      "section_from": "De {day}",
+      "yesterday": "Ontem",
+      "today": "Hoje",
+      "sheet_title": "{day}: {meal}",
+      "add_title": "Adicionar ao diário",
+      "add_aria": "Adicionar {meal} ao diário"
+    },
+    "off_no_values_listed": "Não há valores informados",
+    "off_skipped": "Os seguintes produtos foram ignorados porque o Open Food Facts não possui valores nutricionais \"como vendidos\": {names}. Cadastre-os em Alimentos usando os valores do rótulo.",
+    "category_all": "Todos",
+    "saved_meals": "Refeições salvas",
+    "search_empty_hint": "Tente pesquisar no Open Food Facts ou no USDA acima",
+    "multi_portion_sheet": "Definir porções ({count} itens)",
+    "add_to_diary": "Adicionar ao diário",
+    "tier": {
+      "reset": "Limpar filtros",
+      "off_data_quality": "Qualidade dos dados do OFF",
+      "usda_data_type": "Tipo de dados do USDA",
+      "off_high": "Alta",
+      "off_high_hint": "(≥ 70%)",
+      "off_medium": "Média",
+      "off_medium_hint": "(40–69%)",
+      "off_low": "Baixa",
+      "off_low_hint": "(< 40%)",
+      "off_unknown": "Desconhecida",
+      "off_unknown_hint": "(sem dados)",
+      "usda_foundation": "Fundamentais",
+      "usda_foundation_hint": "(dados selecionados)",
+      "usda_sr_legacy": "SR Legacy",
+      "usda_sr_legacy_hint": "(referência)",
+      "usda_survey": "Pesquisas (FNDDS)",
+      "usda_survey_hint": "(dados compostos)",
+      "usda_branded": "Produtos de marca",
+      "usda_branded_hint": "(enviados por fabricantes)",
+      "usda_experimental": "Experimental",
+      "usda_experimental_hint": "(pesquisa científica)"
+    },
+    "search_placeholder": "Pesquise alimentos ou leia um código de barras…",
+    "scan_barcode": "Ler código de barras",
+    "add_new": "Adicionar novo",
+    "n_selected": "{n} selecionados",
+    "add_n": "Adicionar {n}",
+    "adding": "Adicionando…",
+    "add_selected_to_diary": "Adicionar selecionados ao diário",
+    "search_in": "Pesquisar em {source}",
+    "searching_in": "Pesquisando em {source}…",
+    "no_results_in": "Nenhum resultado em {source}",
+    "looking_up_barcode": "Consultando código de barras",
+    "detail": {
+      "edit": "Editar",
+      "edit_aria": "Editar alimento",
+      "add_to_diary": "Adicionar ao diário",
+      "add_to_diary_aria": "Adicionar ao diário",
+      "add_to_which_meal": "Adicionar a qual refeição?",
+      "off_prepared_only": "O Open Food Facts informa apenas valores \"após o preparo\" deste produto. Toque em Editar para conferi-los e decidir se deseja utilizá-los.",
+      "off_implausible": "O Open Food Facts informa apenas valores \"após o preparo\" deste produto, mas eles parecem incorretos. Toque em Editar e informe os valores do rótulo.",
+      "off_none": "O Open Food Facts não possui informações nutricionais deste produto. Toque em Editar e informe os valores do rótulo.",
+      "per_serving": "por porção",
+      "barcode": "Código de barras",
+      "added_to": "Adicionado a {meal}",
+      "delete_aria": "Excluir alimento",
+      "delete_confirm_title": "Excluir este alimento?",
+      "delete_confirm_body": "\"{name}\" será removido dos seus alimentos. Os registros já existentes no diário que utilizam esse alimento serão mantidos.",
+      "deleted": "Alimento excluído",
+      "delete_meal_aria": "Excluir refeição",
+      "delete_meal_confirm_title": "Excluir esta refeição?",
+      "delete_meal_confirm_body": "\"{name}\" será removido das suas refeições. Os registros existentes no diário que a utilizam serão mantidos.",
+      "meal_deleted": "Refeição excluída",
+      "delete_recipe_aria": "Excluir receita",
+      "delete_recipe_confirm_title": "Excluir esta receita?",
+      "delete_recipe_confirm_body": "\"{name}\" será removida das suas receitas. Os registros existentes no diário que a utilizam serão mantidos.",
+      "recipe_deleted": "Receita excluída"
+    },
+    "sources": {
+      "local": "Local",
+      "from_others": "De outras pessoas",
+      "all": "Todas",
+      "shared": "Compartilhados",
+      "mealie": "Mealie"
+    },
+    "all_mode": {
+      "search_hint": "Pesquisar em todas as fontes ativadas",
+      "searching": "Pesquisando em todas as fontes…",
+      "no_matches": "Nenhum resultado para \"{q}\" nas fontes disponíveis",
+      "loading_more": "Carregando mais…",
+      "still_searching_others": "Ainda pesquisando em outras fontes…"
+    },
+    "offline": {
+      "source": "requer conexão",
+      "search_hint": "Você está offline, por isso a pesquisa foi limitada aos seus alimentos. O Open Food Facts, o USDA e outras fontes exigem conexão."
+    }
+  },
+  "food_editor": {
+    "off_prepared": {
+      "only_prepared": "O Open Food Facts informa apenas os valores deste produto \"após o preparo\": {kcal} kcal por 100 {unit}. Eles se referem ao alimento pronto para consumo, o que pode ser diferente da forma como você o pesa.",
+      "use": "Usar estes valores",
+      "implausible": "O Open Food Facts informa apenas valores \"após o preparo\", que parecem incorretos ({kcal} kcal por 100 {unit}). Informe os valores do rótulo.",
+      "none": "O Open Food Facts não possui informações nutricionais deste produto. Informe os valores do rótulo.",
+      "note": "Valores nutricionais \"após o preparo\" (Open Food Facts)."
+    },
+    "off_share": {
+      "need_account": "Adicione sua conta do Open Food Facts para compartilhar produtos. Ela fica em Configurações > Fontes de alimentos.",
+      "save_and_share": "Salvar e compartilhar",
+      "login": "O Open Food Facts não aceitou seu nome de usuário ou senha.",
+      "refused": "O Open Food Facts recusou o produto: {detail}",
+      "refused_plain": "O Open Food Facts recusou o produto.",
+      "unreachable": "Não foi possível acessar o Open Food Facts. Tente novamente mais tarde.",
+      "photo_failed": "O produto foi compartilhado, mas o Open Food Facts não recebeu a foto."
+    },
+    "name_placeholder": "Nome do alimento",
+    "brand_placeholder": "Marca (opcional)",
+    "saved": "Salvo",
+    "added_to_diary": "Adicionado ao diário",
+    "card_photo": "Foto",
+    "card_basic": "Informações básicas",
+    "card_categories": "Categorias",
+    "card_notes": "Observações",
+    "card_nutrition": "Informações nutricionais",
+    "values_for": "Valores para {amount}",
+    "take_photo": "Tirar foto",
+    "crop_photo": "Recortar foto",
+    "crop_hint": "Arraste a área para reposicionar e os cantos para ajustar o tamanho",
+    "draft_restored": "As alterações anteriores não salvas foram recuperadas.",
+    "draft_discard": "Descartar",
+    "field_brand": "Marca",
+    "field_serving_size": "Tamanho da porção",
+    "field_unit": "Unidade",
+    "field_nutrition_basis": "Base dos valores nutricionais",
+    "field_serving_units": "Unidades de porção",
+    "field_barcode": "Código de barras",
+    "placeholder_optional": "Opcional",
+    "notes_placeholder": "Observações opcionais",
+    "readonly_sub": "Toque em Salvar no meu catálogo para adicionar este alimento e poder editá-lo.",
+    "photo_remove": "Remover foto",
+    "close_camera": "Fechar câmera",
+    "cancel": "Cancelar",
+    "scan_barcode": "Ler código de barras",
+    "scan_label_title": "Fotografe o rótulo nutricional para preencher estes campos",
+    "remove_serving_unit": "Remover unidade de porção",
+    "refresh_usda": "Atualizar dados do USDA",
+    "toast": {
+      "camera_denied": "Acesso à câmera negado ou indisponível.",
+      "barcode_set": "Código de barras definido",
+      "off_upload_failed": "Não foi possível enviar ao Open Food Facts: {error}",
+      "off_not_found": "Não encontrado no Open Food Facts",
+      "off_refreshed": "Dados atualizados pelo Open Food Facts",
+      "off_up_to_date": "Os dados já estão iguais aos do Open Food Facts",
+      "off_prepared_only": "O Open Food Facts possui apenas valores \"após o preparo\" para este produto; nada foi alterado",
+      "off_units_differ": "Este alimento é medido em {unit}, unidade para a qual os valores do Open Food Facts não podem ser convertidos; nada foi alterado",
+      "off_no_nutrition": "O Open Food Facts ainda não possui informações nutricionais deste produto",
+      "off_offline": "A atualização pelo Open Food Facts exige conexão. Tente novamente quando estiver online.",
+      "usda_up_to_date": "Os dados já estão iguais aos do USDA",
+      "usda_not_found": "Não encontrado no USDA FoodData Central",
+      "usda_units_differ": "Este alimento é medido em {unit}, unidade para a qual os valores do USDA não podem ser convertidos; nada foi alterado",
+      "usda_no_nutrition": "O USDA não possui informações nutricionais deste alimento",
+      "usda_offline": "A atualização pelo USDA exige conexão. Tente novamente quando estiver online.",
+      "usda_needs_key": "Para atualizar dados do USDA, ative a integração e configure uma chave de API em Configurações > Fontes de alimentos.",
+      "refresh_failed": "Falha ao atualizar: {error}",
+      "label_read_failed": "Não foi possível ler o rótulo. Tente uma foto mais nítida.",
+      "nutrition_extracted": "Informações nutricionais extraídas do rótulo",
+      "scan_failed": "Falha na leitura: {error}",
+      "saved_copy": "Cópia salva no seu catálogo",
+      "save_copy_failed": "Não foi possível salvar a cópia: {error}",
+      "save_failed": "Falha ao salvar: {error}",
+      "unknown_error": "erro desconhecido"
+    },
+    "errors": {
+      "name_required": "Informe um nome"
+    },
+    "energy": "Valor energético",
+    "derived": {
+      "sodium_from_salt": "Calculado automaticamente a partir do sal (× 400 mg/g)",
+      "salt_from_sodium": "Calculado automaticamente a partir do sódio (÷ 400)"
+    }
+  },
+  "meal_editor": {
+    "meal_name_placeholder": "Nome da refeição",
+    "recipe_name_placeholder": "Nome da receita",
+    "card_photo": "Foto",
+    "draft_restored": "As alterações anteriores não salvas foram recuperadas.",
+    "draft_discard": "Descartar",
+    "card_categories": "Categorias",
+    "card_notes": "Observações",
+    "card_nutrition_totals": "Totais nutricionais",
+    "add_ingredient": "Adicionar ingrediente",
+    "save_changes": "Salvar alterações",
+    "ct_refresh": {
+      "headline": "Há conteúdo mais recente no CookTrace",
+      "sub": "Atualize para obter o nome, os ingredientes e os totais mais recentes.",
+      "refresh": "Atualizar",
+      "dismiss": "Dispensar",
+      "refreshed_toast": "Receita atualizada pelo CookTrace",
+      "error_toast": "Não foi possível atualizar pelo CookTrace",
+      "deleted_toast": "Receita excluída"
+    },
+    "ct_unscaled": "O CookTrace não conseguiu converter {amount}. Edite a quantidade.",
+    "ct_unscaled_blank": "O CookTrace não tinha a quantidade deste ingrediente. Edite a quantidade.",
+    "ct_deleted": {
+      "headline": "A origem no CookTrace não está mais disponível",
+      "sub": "A receita original no CookTrace foi excluída ou não pode mais ser acessada com este token.",
+      "unlink": "Desvincular",
+      "delete": "Excluir"
+    },
+    "use_this_crop": "Usar este recorte",
+    "back": "Voltar",
+    "search_placeholder": "Pesquisar…",
+    "scan_barcode": "Ler código de barras",
+    "field_serving_size": "Tamanho da porção",
+    "field_unit": "Unidade",
+    "field_quantity": "Quantidade",
+    "servings": {
+      "title": "Porções",
+      "amount_placeholder": "Automático a partir dos ingredientes",
+      "total_weight_hint": "Peso total. Calculado a partir dos ingredientes; ajuste caso o preparo altere o peso (por exemplo, perda de água no cozimento).",
+      "yields_unit": "porções",
+      "yields_hint": "Número de porções produzidas por esta receita.",
+      "per_serving_label": "Por porção:"
+    },
+    "errors": {
+      "no_ingredients": "Adicione pelo menos um ingrediente",
+      "off_no_values": "O Open Food Facts não possui valores nutricionais \"como vendidos\" de {name}. Cadastre o alimento em Alimentos com os dados do rótulo e selecione-o aqui."
+    }
+  },
+  "nutrition_facts": {
+    "title": "Informação nutricional",
+    "serving_size": "Porção",
+    "amount_per": "Quantidade por porção",
+    "includes": "Inclui {amount} de {label}",
+    "per_100": "Por 100 {unit}",
+    "per_100_energy": "{value} por 100 {unit}",
+    "per_100_from": "Os valores por 100 {unit} foram calculados a partir de uma porção de {amount}.",
+    "per_100_unknown": "Para calcular os valores por 100 g, informe o peso da porção ou de cada ingrediente em gramas ou mililitros."
   }
 }
